@@ -62,12 +62,7 @@ module.exports.create = function (server, host, port, publicDir) {
     });
     app.post('/signin', function(req, res){
         if (req.body && req.body.userid && req.body.passwd && req.body.userid === 'ysbsqa_gemini' && req.body.passwd === 'P1234567p') {
-            //res.setHeader(200, {'Content-Type': 'text/event-stream'});
-            res.setHeader("Set-Cookie", 'Y1=v=1&n=df4qqbrmfu2e6&l=oi1ig0_64c8d8/o&r=uh&&intl=us&np=1;Version=1;Domain=.yahoo.com;Path=/;Max-Age=86400;\nSet-Cookie: T1=sk=DAAweR4iByBA6N&ks=EAAkPdvORMhGheKnnhZby9fIw--~E&d=dGlwAW9JSzVDQgFvawFlbQFzbAFNVGd4TkRjd09EYzROemd3T0EtLQF6egF6SUxnVkJBN0UBdGYBQ0FB;Version=1;Domain=.yahoo.com;Path=/;Max-Age=86400\nSet-Cookie: Y=v=1&n=df4qqbrmfu2e6&l=oi1ig0_64c8d8/o&r=uh&&intl=us&np=1;Version=1;Domain=.devesh.in;Path=/;Max-Age=86400\nSet-Cookie: T=sk=DAAweR4iByBA6N&ks=EAAkPdvORMhGheKnnhZby9fIw--~E&d=dGlwAW9JSzVDQgFvawFlbQFzbAFNVGd4TkRjd09EYzROemd3T0EtLQF6egF6SUxnVkJBN0UBdGYBQ0FB;Version=1;Domain=.devesh.in;Path=/;Max-Age=86400');
-
-            res.render('signin', {
-                title: 'Setting cookies/PROXY'
-            });
+            res.redirect(301, 'http://fairrare.corp.ne1.yahoo.com/setcookie');
         } else {
             res.send("Sorry, you are not authorized");
         }
