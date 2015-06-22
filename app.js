@@ -1,41 +1,76 @@
 'use strict';
 module.exports.create = function (server, host, port, publicDir) {
     var express = require('express');
-var routes = require('./routes');
-var login = require('./routes/login');
-var path = require('path');
+    var routes = require('./routes');
+    var login = require('./routes/login');
+    var path = require('path');
 
-var favicon = require('serve-favicon');
-var logger = require('morgan');
-var methodOverride = require('method-override');
-var session = require('express-session');
-var bodyParser = require('body-parser');
-var csurf = require('csurf');
-var multer = require('multer');
-var errorHandler = require('errorhandler');
+    var favicon = require('serve-favicon');
+    var logger = require('morgan');
+    var methodOverride = require('method-override');
+    var session = require('express-session');
+    var bodyParser = require('body-parser');
+    var csurf = require('csurf');
+    var multer = require('multer');
+    var errorHandler = require('errorhandler');
 
-var app = express();
-var cons = require('consolidate');
-app.engine('dust', cons.dust);
+    var app = express();
+    var cons = require('consolidate');
+    app.engine('dust', cons.dust);
 
-// all environments
-app.set('port', process.env.PORT || 80);
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'dust');
-app.use(favicon(__dirname + '/public/favicon.ico'));
-//app.use(logger('dev'));
-app.use(methodOverride());
-app.use(session({ resave: true, saveUninitialized: true, secret: 'uwotm8' }));
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(multer());
-app.use(csurf());
-app.use(express.static(path.join(__dirname, 'public')));
+    // all environments
+    app.set('port', process.env.PORT || 80);
+    app.set('views', path.join(__dirname, 'views'));
+    app.set('view engine', 'dust');
+    app.use(favicon(__dirname + '/public/favicon.ico'));
 
-    app.get('/test', function(req, res){
+    //app.use(logger('dev'));
+    app.use(methodOverride());
+    app.use(session({ resave: true, saveUninitialized: true, secret: 'uwotm8' }));
+    app.use(bodyParser.json());
+    app.use(bodyParser.urlencoded({ extended: true }));
+    app.use(multer());
+    app.use(csurf());
+    app.use(express.static(path.join(__dirname, 'public')));
+
+    app.get('/', function(req, res){
         res.render('index', {
-            title: 'Testing out dust.js server-side rendering'
+            title: 'Welcome to {WEBSITE}'
         });
+    });
+    app.get('/login', function(req, res){
+        res.render('login', {
+            title: 'Sign in to {WEBSITE}',
+            csrfToken: req.csrfToken()
+        });
+    });
+    app.get('/registration', function(req, res){
+        res.render('registration', {
+            title: 'Create an account',
+            csrfToken: req.csrfToken()
+        });
+    });
+    app.post('/registration', function(req, res){
+        res.send("Account has been created successfully");
+    });
+
+    app.get('/signin', function(req, res){
+        res.render('login', {
+            title: 'Sign in to {WEBSITE}',
+            csrfToken: req.csrfToken()
+        });
+    });
+    app.post('/signin', function(req, res){
+        if (req.body && req.body.userid && req.body.passwd && req.body.userid === 'ysbsqa_gemini' && req.body.passwd === 'P1234567p') {
+            //res.setHeader(200, {'Content-Type': 'text/event-stream'});
+            res.setHeader("Set-Cookie", 'Y1=v=1&n=df4qqbrmfu2e6&l=oi1ig0_64c8d8/o&r=uh&&intl=us&np=1;Version=1;Domain=.yahoo.com;Path=/;Max-Age=86400;\nSet-Cookie: T1=sk=DAAweR4iByBA6N&ks=EAAkPdvORMhGheKnnhZby9fIw--~E&d=dGlwAW9JSzVDQgFvawFlbQFzbAFNVGd4TkRjd09EYzROemd3T0EtLQF6egF6SUxnVkJBN0UBdGYBQ0FB;Version=1;Domain=.yahoo.com;Path=/;Max-Age=86400\nSet-Cookie: Y=v=1&n=df4qqbrmfu2e6&l=oi1ig0_64c8d8/o&r=uh&&intl=us&np=1;Version=1;Domain=.devesh.in;Path=/;Max-Age=86400\nSet-Cookie: T=sk=DAAweR4iByBA6N&ks=EAAkPdvORMhGheKnnhZby9fIw--~E&d=dGlwAW9JSzVDQgFvawFlbQFzbAFNVGd4TkRjd09EYzROemd3T0EtLQF6egF6SUxnVkJBN0UBdGYBQ0FB;Version=1;Domain=.devesh.in;Path=/;Max-Age=86400');
+
+            res.render('signin', {
+                title: 'Setting cookies/PROXY'
+            });
+        } else {
+            res.send("Sorry, you are not authorized");
+        }
     });
 
     // app.get('/login', login.list);
