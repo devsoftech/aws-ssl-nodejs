@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
     <script type="text/javascript" src='/javascripts/utils.js'></script>
     <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="https://s.yimg.com/sv/ms20/css/0.91/ysb-common.css">
 </head>
 <body>
 {>header /}
@@ -15,7 +16,7 @@
         <p><label for="s-user"><span style="display: inline-block; width: 150px; text-align: right;">Email: </span></label><input type="text" name="userid" id="s-user" value=""></p>
         <p><label for="s-pass"><span style="display: inline-block; width: 150px; text-align: right;">Password: </span></label><input type="text" name="passwd" id="s-pass" value=""></p>
         <p><input type="checkbox" name="agreement" id="agreement"> I agree to the terms and conditions</p>
-        <br/><p style="display: inline-block; width: 270px; text-align: right;"><input type="submit" class="submit" value="Create Account"></p>
+        <br/><p style="display: inline-block; width: 270px; text-align: right;"><button class="button-tertiary">Create Account</button></p>
 
         <p>Already have an account? <a href="/login">Sign In</a></p>
         <p>{csrfToken}<input type="hidden" name="_csrf" value="{csrfToken}"></p>
