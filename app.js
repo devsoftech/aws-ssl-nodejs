@@ -20,7 +20,7 @@ module.exports.create = function (server, host, port, publicDir) {
 
     // all environments
     app.set('port', process.env.PORT || 80);
-    app.set('views', path.join(__dirname, 'views'));
+    app.set('views', path.join(__dirname, 'templates'));
     app.set('view engine', 'dust');
     app.use(favicon(__dirname + '/public/favicon.ico'));
 
