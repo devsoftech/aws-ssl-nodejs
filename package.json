@@ -4,8 +4,7 @@
   "description": "zero-config HTTPS server example (complete with bogus TLS/SSL 2048-bit RSA PEM certs)",
   "main": "serve.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -43,7 +42,6 @@
     "express": "^4.11.2",
     "request": "^2.51.0",
     "consolidate": "0.13.1",
-
     "body-parser": "^1.5.2",
     "errorhandler": "^1.1.1",
     "express-session": "^1.7.2",
@@ -53,5 +51,13 @@
     "serve-favicon": "^2.0.1",
     "csurf": "1.8.3",
     "dustjs-linkedin": "2.7.2"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-aws-s3": "~0.13.1",
+    "grunt-contrib-clean": "^0.6.0",
+    "grunt-contrib-copy": "^0.7.0",
+    "grunt-aws": "~0.5.4",
+    "grunt-contrib-connect": "~0.10.1"
   }
 }
