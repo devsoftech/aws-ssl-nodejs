@@ -10,11 +10,11 @@
     {+http_header/}
 </head>
 <body>
-    {>header /}
+    {>"default.desktop.normal.header.layout.dust" /}
 <div id="wrapper">
     <p>PRESALES / PROMO CONTENT</p>
     <p>Already have an account? <a href="/login">Sign In</a></p>
 </div>
-    {>footer /}
+    {>"default.desktop.normal.footer.layout.dust" /}
 </body>
 </html>

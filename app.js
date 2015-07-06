@@ -34,30 +34,28 @@ module.exports.create = function (server, host, port, publicDir) {
     app.use(express.static(path.join(__dirname, 'public')));
 
     app.get('/', function(req, res){
-        res.render('index', {
-            title: 'Welcome to {WEBSITE}'
-        });
+        res.render('default.desktop.normal.index.page.dust');
     });
     app.get('/login', function(req, res){
-        res.render('login', {
-            title: 'Sign in to {WEBSITE}',
+        res.render('default.desktop.normal.login.page.dust', {
+            title: 'Sign in to WEBSITE',
             csrfToken: req.csrfToken()
         });
     });
     app.get('/registration', function(req, res){
-        res.render('default.desktop.normal.createaccount.page', {
+        res.render('default.desktop.normal.createaccount.page.dust', {
             csrfToken: req.csrfToken()
         });
     });
     app.post('/registration', function(req, res){
         //validation
-        res.render('default.desktop.normal.accountinfo.page', {
+        res.render('default.desktop.normal.createaccount.page.dust', {
             csrfToken: req.csrfToken()
         });
     });
 
     app.get('/signin', function(req, res){
-        res.render('login', {
+        res.render('default.desktop.normal.login.page.dust', {
             csrfToken: req.csrfToken()
         });
     });

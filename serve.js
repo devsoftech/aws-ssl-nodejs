@@ -3,6 +3,8 @@ var host, publicDir, app = require('./app'), myapp,
     https = require('https'), http = require('http'), path = require('path'), port = process.argv[2] || 443,
     insecurePort = process.argv[3] || 80, fs = require('fs'), path = require('path'), checkip = require('check-ip-address'), server, insecureServer, options;
 
+
+process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
 // SSL Certificates
 options = {
     key: fs.readFileSync(path.join('../certs', 'www_devesh_in.pem.key')),
