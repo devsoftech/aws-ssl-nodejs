@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://s.yimg.com/sv/ms20/css/0.91/ysb-common.css">
 </head>
 <body>
-    {>header /}
+    {>"default.desktop.normal.header.layout.dust" /}
 <div id="wrapper">
     <h2>Create an account</h2>
     <h3>You'll need a WEBSITE account to access your dashboards and control panels to manage your purchase.</h3>
@@ -23,6 +23,6 @@
         <p>{csrfToken}<input type="hidden" name="_csrf" value="{csrfToken}"></p>
     </form>
 </div>
-    {>footer /}
+    {>"default.desktop.normal.footer.layout.dust" /}
 </body>
 </html>

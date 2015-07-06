@@ -9,11 +9,11 @@
     <link rel="stylesheet" href="https://s.yimg.com/sv/ms20/css/0.91/ysb-common.css">
 </head>
 <body>
-    {>header /}
+    {>"default.desktop.normal.header.layout.dust" /}
 <div id="wrapper">
     <h3>You have been successfully logged out.</h3>
     <p><a href="/login">Sign In</a></p>
 </div>
-    {>footer /}
+    {>"default.desktop.normal.footer.layout.dust" /}
 </body>
 </html>

@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://s.yimg.com/sv/ms20/css/0.91/ysb-common.css">
 </head>
 <body>
-    {>header /}
+    {>"default.desktop.normal.header.layout.dust" /}
 <div id="wrapper">
     <ul>
         <li>
@@ -75,6 +75,6 @@
         </li>
     </ul>
 </div>
-    {>footer /}
+    {>"default.desktop.normal.footer.layout.dust" /}
 </body>
 </html>

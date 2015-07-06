@@ -8,13 +8,13 @@
     <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
 </head>
 <body>
-    {>header /}
+    {>"default.desktop.normal.header.layout.dust" /}
 <div id="wrapper">
     <div id="content">
         <p>You have been sucessfully signed in, you will be now taken to YAHOO domain with logged in experience<p>
     </div>
 </div>
-    {>footer /}
+    {>"default.desktop.normal.footer.layout.dust" /}
 
 <script>
     alert('redirect to new site');
