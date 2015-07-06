@@ -49,7 +49,7 @@ module.exports.create = function (server, host, port, publicDir) {
     });
     app.post('/registration', function(req, res){
         //validation
-        res.render('default.desktop.normal.createaccount.page.dust', {
+        res.render('default.desktop.normal.accountinfo.page.dust', {
             csrfToken: req.csrfToken()
         });
     });
