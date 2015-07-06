@@ -13,7 +13,7 @@
 <div id="wrapper">
     <h2>Create an account</h2>
     <h3>You'll need a WEBSITE account to access your dashboards and control panels to manage your purchase.</h3>
-    <form method="POST" action="/registration">
+    <form method="POST" action="/createaccount">
         <p><label for="s-user"><span style="display: inline-block; width: 150px; text-align: right;">Email: </span></label><input type="text" name="userid" id="s-user" value=""></p>
         <p><label for="s-pass"><span style="display: inline-block; width: 150px; text-align: right;">Password: </span></label><input type="text" name="passwd" id="s-pass" value=""></p>
         <p><input type="checkbox" name="agreement" id="agreement"> I agree to the terms and conditions</p>

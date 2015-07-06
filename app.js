@@ -47,11 +47,32 @@ module.exports.create = function (server, host, port, publicDir) {
             csrfToken: req.csrfToken()
         });
     });
-    app.post('/registration', function(req, res){
+    app.get('/accountinfo', function(req, res){
         //validation
         res.render('default.desktop.normal.accountinfo.page.dust', {
             csrfToken: req.csrfToken()
         });
+    });
+    app.post('/createaccount', function(req, res){
+        //validation
+        res.render('default.desktop.normal.accountinfo.page.dust', {
+            csrfToken: req.csrfToken()
+        });
+    });
+    app.get('/loginissue', function(req, res){
+        //validation
+        res.render('default.desktop.normal.forgotpassword.page.dust', {
+            csrfToken: req.csrfToken()
+        });
+    });
+    app.post('/passwordreset', function(req, res){
+        //validation
+        res.render('default.desktop.normal.passwordresetconfirmation.page.dust', {
+            csrfToken: req.csrfToken()
+        });
+    });
+    app.get('/passwordreset', function(req, res){
+        res.send("Sorry, you are not authorized");
     });
 
     app.get('/signin', function(req, res){
