@@ -14,6 +14,7 @@
 <div id="wrapper">
     <p>PRESALES / PROMO CONTENT</p>
     <p>Already have an account? <a href="/login">Sign In</a></p>
+    <p>Don't have an account? <a href="/registration">Create one</a></p>
 </div>
     {>"default.desktop.normal.footer.layout.dust" /}
 </body>
