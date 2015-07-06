@@ -20,7 +20,7 @@
         <br/><p style="display: inline-block; width: 270px; text-align: right;"><button class="button-tertiary">Create Account</button></p>
 
         <p>Already have an account? <a href="/login">Sign In</a></p>
-        <p>{csrfToken}<input type="hidden" name="_csrf" value="{csrfToken}"></p>
+        <p><input type="hidden" name="_csrf" value="{csrfToken}"></p>
     </form>
 </div>
     {>"default.desktop.normal.footer.layout.dust" /}

@@ -18,7 +18,7 @@
         <p><label for="s-pass"><span style="display: inline-block; width: 150px; text-align: right;">Password: </span></label><input type="password" name="passwd" id="s-pass" value=""></p>
         <br/><p style="display: inline-block; width: 270px; text-align: right;"><button class="button-tertiary">Sign In</button></p>
 
-        <p>{csrfToken}<input type="hidden" name="_csrf" value="{csrfToken}"></p>
+        <p><input type="hidden" name="_csrf" value="{csrfToken}"></p>
     </form>
     <p>Don't have an account? <a href="/registration">Create one</a></p>
 </div>
