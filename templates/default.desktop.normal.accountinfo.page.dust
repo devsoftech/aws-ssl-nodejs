@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Account Information</title>
+    <script type="text/javascript" src='/javascripts/utils.js'></script>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="https://s.yimg.com/sv/ms20/css/0.91/ysb-common.css">
+</head>
+<body>
+    {>header /}
+<div id="wrapper">
+    <ul>
+        <li>
+            <div>
+                <div>Name</div>
+                <div>{name}</div>
+                <div><a href="/accountinfo" action="edit.name">Edit</a></div>
+            </div>
+        </li>
+        <li>
+            <div>
+                <div>User Name/Email</div>
+                <div>{name}</div>
+                <div><a href="/accountinfo" action="edit.name">Edit</a></div>
+            </div>
+        </li>
+        <li>
+            <div>
+                <div>Password</div>
+                <div>{name}</div>
+                <div><a href="/accountinfo" action="edit.name">Edit</a></div>
+            </div>
+        </li>
+        <li>
+            <div>
+                <div>Business Name</div>
+                <div>{name}</div>
+                <div><a href="/accountinfo" action="edit.name">Edit</a></div>
+            </div>
+        </li>
+        <li>
+            <div>
+                <div>Business Category</div>
+                <div>{name}</div>
+                <div><a href="/accountinfo" action="edit.name">Edit</a></div>
+            </div>
+        </li>
+        <li>
+            <div>
+                <div>Cell Phone Number</div>
+                <div>{name}</div>
+                <div><a href="/accountinfo" action="edit.name">Edit</a></div>
+            </div>
+        </li>
+        <li>
+            <div>
+                <div>Your Role</div>
+                <div>{name}</div>
+                <div><a href="/accountinfo" action="edit.name">Edit</a></div>
+            </div>
+        </li>
+        <li>
+            <div>
+                <div>Business Address</div>
+                <div>
+                    <p>{bizname}</p>
+                    <p>{street}</p>
+                    <p>{city}, {state} {zip}</p>
+                    <p>{country}</p>
+                </div>
+                <div><a href="/accountinfo" action="edit.name">Edit</a></div>
+            </div>
+        </li>
+    </ul>
+</div>
+    {>footer /}
+</body>
+</html>

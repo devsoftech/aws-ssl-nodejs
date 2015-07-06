@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sign in to WEBSITE</title>
+    <script type="text/javascript" src='/javascripts/utils.js'></script>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="https://s.yimg.com/sv/ms20/css/0.91/ysb-common.css">
+</head>
+<body>
+    {>header /}
+<div id="wrapper">
+    <h2>Sign in to WEBSITE</h2>
+    <h3>Welcome back! Log in to your account and complete your purchase.</h3>
+    <form method="POST" action="/signin">
+        <p><label for="s-user"><span style="display: inline-block; width: 150px; text-align: right;">Email: </span></label><input type="text" name="userid" id="s-user" value=""></p>
+        <p><label for="s-pass"><span style="display: inline-block; width: 150px; text-align: right;">Password: </span></label><input type="password" name="passwd" id="s-pass" value=""></p>
+        <br/><p style="display: inline-block; width: 270px; text-align: right;"><button class="button-tertiary">Sign In</button></p>
+
+        <p>{csrfToken}<input type="hidden" name="_csrf" value="{csrfToken}"></p>
+    </form>
+    <p>Don't have an account? <a href="/registration">Create one</a></p>
+</div>
+    {>footer /}
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>You have been successfully logged out.</title>
+    <script type="text/javascript" src='/javascripts/utils.js'></script>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="https://s.yimg.com/sv/ms20/css/0.91/ysb-common.css">
+</head>
+<body>
+    {>header /}
+<div id="wrapper">
+    <h3>You have been successfully logged out.</h3>
+    <p><a href="/login">Sign In</a></p>
+</div>
+    {>footer /}
+</body>
+</html>

@@ -45,18 +45,19 @@ module.exports.create = function (server, host, port, publicDir) {
         });
     });
     app.get('/registration', function(req, res){
-        res.render('registration', {
-            title: 'Create an account',
+        res.render('default.desktop.normal.createaccount.page', {
             csrfToken: req.csrfToken()
         });
     });
     app.post('/registration', function(req, res){
-        res.send("Account has been created successfully");
+        //validation
+        res.render('default.desktop.normal.accountinfo.page', {
+            csrfToken: req.csrfToken()
+        });
     });
 
     app.get('/signin', function(req, res){
         res.render('login', {
-            title: 'Sign in to {WEBSITE}',
             csrfToken: req.csrfToken()
         });
     });

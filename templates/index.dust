@@ -9,10 +9,10 @@
     {+http_header/}
 </head>
 <body>
-{>header /}
+{>default.desktop.normal.header.layout /}
 <div id="wrapper">
     <p>Welcome to WEBSITE, lot of things to do here.</p>
 </div>
-{>footer /}
+{>default.desktop.normal.footer.layout /}
 </body>
 </html>
