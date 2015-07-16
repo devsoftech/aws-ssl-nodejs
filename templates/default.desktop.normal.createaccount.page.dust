@@ -4,7 +4,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Create an account</title>
-    <script type="text/javascript" src='/javascripts/utils.js'></script>
     <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
     <link rel="stylesheet" href="https://s.yimg.com/sv/ms20/css/0.91/ysb-common.css">
 </head>
@@ -24,5 +23,6 @@
     </form>
 </div>
     {>"default.desktop.normal.footer.layout.dust" /}
+    <script type="text/javascript" src='/javascripts/utils.js'></script>
 </body>
 </html>
