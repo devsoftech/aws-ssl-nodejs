@@ -4,7 +4,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Welcome to WEBSITE</title>
-    <script type="text/javascript" src='/javascripts/utils.js'></script>
     <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
 </head>
 <body>
@@ -20,5 +19,6 @@
     alert('redirect to new site');
 </script>
 
+    <script type="text/javascript" src='/javascripts/utils.js'></script>
 </body>
 </html>
